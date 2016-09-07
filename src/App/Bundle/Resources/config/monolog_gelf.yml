@@ -1,0 +1,12 @@
+monolog:
+    handlers:
+        gelf_fingers_crossed:
+            type:          fingers_crossed
+            action_level:  error
+            handler:       gelf
+        gelf:
+            type:   gelf
+            publisher:
+                hostname: "%xeonys.elk.gelf.host%"
+                port:     "%xeonys.elk.gelf.port%"
+            level: debug

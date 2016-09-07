@@ -7,6 +7,9 @@
     <services>
         <service id="xeonys.logger_extra.app_processor" class="Xeonys\LoggerExtra\Domain\AppLoggerProcessor">
             <tag name="monolog.processor" method="processRecord" />
+            <argument>%xeonys.logger_extra.app_name%</argument>
+            <argument>%xeonys.logger_extra.app_env%</argument>
+            <argument>%xeonys.logger_extra.server_stack%</argument>
         </service>
     </services>
 </container>
