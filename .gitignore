@@ -1,0 +1,6 @@
+bin/
+composer.lock
+vendor/
+.atoum/
+composer.phar
+ocular.phar

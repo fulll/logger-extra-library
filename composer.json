@@ -1,0 +1,25 @@
+{
+    "name": "xeonys/logger-extra-library",
+    "description": "Logger extra useful library",
+    "type": "library",
+    "authors": [{
+        "name": "Xeonys Guys",
+        "homepage": "https://github.com/xeonys/logger-extra-library/graphs/contributors"
+    }],
+    "autoload": {
+        "psr-4": { "Xeonys\\LoggerExtra\\": "src/"}
+    },
+    "require": {
+        "php": ">=5.5"
+    },
+    "suggest": {
+        "monolog/monolog": "The good solution to write log in php.",
+        "graylog2/gelf-php": "Use Gelf to log in ELK stack."
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
