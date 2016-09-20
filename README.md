@@ -12,10 +12,7 @@ composer.json
     "require": {
         "graylog2/gelf-php": "~1.4",
         "xeonys/logger-extra-library": "~1.0"
-    },
-    "repositories": [
-        { "type": "git", "url": "git@github.com:xeonys/logger-extra-library.git" }
-    ]
+    }
 ```
 
 
