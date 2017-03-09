@@ -11,7 +11,7 @@ composer.json
 ```json
     "require": {
         "graylog2/gelf-php": "~1.4",
-        "xeonys/logger-extra-library": "~1.0"
+        "inextensodigital/logger-extra-library": "~1.0"
     }
 ```
 
