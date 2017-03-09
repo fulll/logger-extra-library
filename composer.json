@@ -1,10 +1,10 @@
 {
-    "name": "xeonys/logger-extra-library",
+    "name": "inextensodigital/logger-extra-library",
     "description": "Logger extra useful library",
     "type": "library",
     "authors": [{
-        "name": "Xeonys Guys",
-        "homepage": "https://github.com/xeonys/logger-extra-library/graphs/contributors"
+        "name": "inextensodigital Guys",
+        "homepage": "https://github.com/inextensodigital/logger-extra-library/graphs/contributors"
     }],
     "autoload": {
         "psr-4": { "Xeonys\\LoggerExtra\\": "src/"}
