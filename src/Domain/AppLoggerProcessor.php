@@ -26,4 +26,9 @@ class AppLoggerProcessor
 
         return $record;
     }
+
+    public function resetProcessId()
+    {
+        $this->uniqid = uniqid();
+    }
 }

@@ -48,3 +48,44 @@ parameters.yml
     xeonys.logger_extra.app_env: prod
     xeonys.logger_extra.server_stack: local
 ```
+
+**Do you deal with long process or subprocess which needs finger crossed passthruLevel reinitialized ?**
+
+```
+protected function execute(InputInterface $input, OutputInterface $output)
+{
+    $logger          = $this->getContainer()->get('logger');
+    $subprocessScope = $this->getContainer()->get('xeonys.logger_extra.sub_process_scope');
+
+    for ($i = 1; $i <= 10; $i++) {
+        $subprocessScope->enter();
+
+        $logger->debug("Begin process($i)");
+
+        try {
+            // do something
+            $logger->debug("It is ok !!! ($i)");
+        } catch (\Exception $e) {
+            $logger->critical("Error on ($i)");
+        }
+
+        $logger->debug("End process($i)");
+    }
+}
+```
+
+Imagine we have an error on 3rd $i iteration:
+
+**Before**:
+
+You'll have EACH lines logged, because 3rd thrown an error.
+
+**Now**:
+
+You'll have:
+
+```
+[debug] Begin process (3)
+[critical] Error in ($3)
+[debug] end process (3)
+```

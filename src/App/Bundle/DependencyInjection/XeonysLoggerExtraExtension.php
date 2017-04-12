@@ -22,5 +22,6 @@ class XeonysLoggerExtraExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config/services'));
         $loader->load('processors.xml');
+        $loader->load('service.xml');
     }
 }
