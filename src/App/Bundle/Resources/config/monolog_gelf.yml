@@ -2,7 +2,7 @@ monolog:
     handlers:
         gelf_fingers_crossed:
             type:          fingers_crossed
-            action_level:  error
+            action_level:  warning
             handler:       gelf
         gelf:
             type:   gelf
