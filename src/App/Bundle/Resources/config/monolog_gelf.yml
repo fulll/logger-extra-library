@@ -1,5 +1,8 @@
 monolog:
     handlers:
+        ignore_failures:
+            type: whatfailuregroup
+            members: [gelf_fingers_crossed]
         gelf_fingers_crossed:
             type:          fingers_crossed
             action_level:  warning
