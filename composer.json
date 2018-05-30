@@ -11,7 +11,7 @@
     },
     "require": {
         "php": ">=5.5",
-        "symfony/monolog-bundle": "~2.7.0"
+        "symfony/monolog-bundle": ">=2.7.0"
     },
     "suggest": {
         "monolog/monolog": "The good solution to write log in php.",
